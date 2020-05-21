@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get "/",to: "session#welcome"
-  
+  get "/signup",to: "user#new"
+
   resources :platforms do 
     resources :klasses, only: [:show, :index]
   end
