@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2020_05_21_003657) do
 
   create_table "instructors", force: :cascade do |t|
     t.string "name"
+    t.string "location"
+    t.string "bio"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
