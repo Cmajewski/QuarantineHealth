@@ -17,6 +17,11 @@ class InstructorsController < ApplicationController
         end
     end 
 
+    def show
+        @instructor=Instructor.find(params[:id])
+        redirect_to instructor_klasses_path(@instructor)
+    end
+
     def edit
         @instructor=Instructor.find(params[:id])
     end

@@ -13,7 +13,8 @@ class UsersController < ApplicationController
     end
 
     def show
-
+        @instructor=Instructor.find(Params[:id])
+        redirect_to instructor_klasses_path(@instructor)
     end
 
     private 

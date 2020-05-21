@@ -1,8 +1,10 @@
 class KlassesController < ApplicationController
     def index 
+        @klasses=Klass.all
     end
 
     def new 
+        @klass=Klass.new
     end 
 
     def create 
@@ -15,5 +17,10 @@ class KlassesController < ApplicationController
     end 
 
     def delete 
+    end
+
+    private 
+
+    def klass_params
     end
 end
