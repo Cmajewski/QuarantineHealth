@@ -5,5 +5,5 @@ class Instructor < ApplicationRecord
     validates :name, uniqueness: {scope: [:location, :bio]}
     validates :location, presence: true
 
-ß
+
 end
