@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  match '/auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   get "/",to: "sessions#welcome"
   get "/signup",to: "users#new"
   get "/login", to: "sessions#new"
@@ -19,5 +19,7 @@ Rails.application.routes.draw do
 
   resources :bookings
   resources :workouts
+
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
