@@ -1,4 +1,6 @@
 class SessionsController< ApplicationController
+    before_action :redirect_if_not_logged_in, only: [:destroy]
+
     def welcome 
     end
    
