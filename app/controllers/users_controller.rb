@@ -13,13 +13,15 @@ class UsersController < ApplicationController
     end
 
     def show
-        @instructor=Instructor.find(Params[:id])
-        redirect_to instructor_klasses_path(@instructor)
+    @user=User.find_by_id(params[:id]) 
+    redirect_to "/" if !@user
     end
 
+
     private 
+
     def user_params 
-        params.require(:user).permit(:username, :email, :password, :password_confirmation)
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
 end

@@ -1,1 +1,27 @@
-<h1>Hi, <%=@user.username%></h1>
+<h1>Hi, <%=@user.name%></h1>
+
+<h3>Keep it going, you've attended # classes to date! </h3>
+<div>
+    <%=link_to "Upcoming Classes",workouts_path%>
+</div>
+<div>
+    <%=link_to "Check out Your Favorite Instructors",instructors_path%>
+</div>
+
+
+<h3>Post a Class</h3>
+<div>
+    <%=link_to "Register as an Instructor",new_instructor_path%>
+</div>
+<div>
+    <%=link_to "Post a Class", new_workout_path%>
+</div>
+
+
+
+<h3>Classes Completed</h3>
+
+
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='Logout'>
+<% end %>

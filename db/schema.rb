@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_21_003657) do
+ActiveRecord::Schema.define(version: 2020_05_21_190637) do
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "klass_id"
+    t.integer "workout_id"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -27,16 +27,6 @@ ActiveRecord::Schema.define(version: 2020_05_21_003657) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "klasses", force: :cascade do |t|
-    t.string "name"
-    t.string "type"
-    t.text "description"
-    t.integer "platform_id"
-    t.integer "instructor_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "platforms", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -45,9 +35,21 @@ ActiveRecord::Schema.define(version: 2020_05_21_003657) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "workouts", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.text "description"
+    t.datetime "time"
+    t.string "url"
+    t.integer "platform_id"
+    t.integer "instructor_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,8 +1,0 @@
-<h1>Classes</h1>
-<ul>
-<%@klasses.each do |class|%>
-    <li><%=link_to :name, instructor_klasses_path(instructor)%></li>
-    <%=instructor.location%><br>
-    Bio: <%=instructor.bio%>
-</ul>
-<%end%>

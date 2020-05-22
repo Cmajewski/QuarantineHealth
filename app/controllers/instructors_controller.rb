@@ -19,7 +19,7 @@ class InstructorsController < ApplicationController
 
     def show
         @instructor=Instructor.find(params[:id])
-        redirect_to instructor_klasses_path(@instructor)
+        redirect_to instructor_workouts_path(@instructor)
     end
 
     def edit
@@ -37,7 +37,7 @@ class InstructorsController < ApplicationController
 
     def destroy
         @instructor.find[params[:id]]
-        @instructo.destroy
+        @instructor.destroy
         redirect_to instructors.path
     end
 

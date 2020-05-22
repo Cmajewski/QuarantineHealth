@@ -1,6 +1,6 @@
 class Instructor < ApplicationRecord
-    has_many :klasses
-    has_many :instructors, through: :klasses
+    has_many :workouts
+    has_many :instructors, through: :workouts
     validates :name, presence: true
     validates :name, uniqueness: {scope: [:location, :bio]}
     validates :location, presence: true

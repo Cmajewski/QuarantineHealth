@@ -1,0 +1,8 @@
+<h1>Classes</h1>
+<ul>
+<% @workouts.each do |workout|%>
+    <li><%=link_to workout.name, klass_path(workout) %></li>
+    <li><%= workout.type%></li>
+    <li><%= workout.description%></li>
+</ul>
+<%end%>

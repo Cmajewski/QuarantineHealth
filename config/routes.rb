@@ -1,19 +1,22 @@
 Rails.application.routes.draw do
-  get "/",to: "session#welcome"
-  get "/signup",to: "user#new"
+  
+  get "/",to: "sessions#welcome"
+  get "/signup",to: "users#new"
+  get "/login", to: "sessions#new"
+  post "login", to: "sessions#destroy"
 
   resources :platforms do 
-    resources :klasses, only: [:show, :index]
+    resources :workouts, only: [:show, :index, :new]
   end
   resources :instructors do
-    resources :klasses, only: [:show, :index, :new]
+    resources :workouts, only: [:show, :index, :new]
   end
   
   resources :users do
-    resources :klasses, only: [:show,:index]
+    resources :workouts, only: [:show,:index]
   end
 
-  resources :klasses
   resources :bookings
+  resources :workouts
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

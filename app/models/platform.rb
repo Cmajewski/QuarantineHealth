@@ -1,4 +1,4 @@
 class Platform < ApplicationRecord
-    has_many: klasses 
-    has_many: instructors, through: :classes 
+    has_many :workouts 
+    has_many :instructors, through: :workouts 
 end

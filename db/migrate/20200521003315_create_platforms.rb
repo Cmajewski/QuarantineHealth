@@ -3,7 +3,7 @@ class CreatePlatforms < ActiveRecord::Migration[6.0]
     create_table :platforms do |t|
       t.string :name
       t.string :description
-
+      
       t.timestamps
     end
   end

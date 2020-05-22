@@ -1,7 +1,7 @@
 class CreateBookings < ActiveRecord::Migration[6.0]
   def change
     create_table :bookings do |t|
-      t.integer :klass_id
+      t.integer :workout_id
       t.integer :user_id
 
       t.timestamps

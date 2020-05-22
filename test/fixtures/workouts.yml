@@ -4,6 +4,8 @@ one:
   name: MyString
   type: 
   description: MyText
+  time: 2020-05-21 15:06:37
+  url: MyString
   platform_id: 1
   instructor_id: 1
 
@@ -11,5 +13,7 @@ two:
   name: MyString
   type: 
   description: MyText
+  time: 2020-05-21 15:06:37
+  url: MyString
   platform_id: 1
   instructor_id: 1
