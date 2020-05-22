@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get "/",to: "sessions#welcome"
   get "/signup",to: "users#new"
   get "/login", to: "sessions#new"
-  post "login", to: "sessions#destroy"
+  post "/login", to: "sessions#create"
+  post "logout", to: "sessions#destroy"
 
   resources :platforms do 
     resources :workouts, only: [:show, :index, :new]

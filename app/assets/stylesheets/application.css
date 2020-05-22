@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ .warning {
+    background-color:red;
+    border-color:red;
+    color: #ffffff;
+  }
