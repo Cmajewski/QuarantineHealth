@@ -1,6 +1,6 @@
 class PlatformsController < ApplicationController
-    before_action :require_login
-    
+    before_action :redirect_if_not_logged_in
+
     def index 
     end
 

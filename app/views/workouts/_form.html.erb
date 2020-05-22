@@ -10,11 +10,15 @@
                 </ul>
                 <%end%>
             </div>
+<%=f.label :platform_name%>
+<%=platform_id_field(@workout)%><br>
 <%=f.label :instructor_name%>
-<%=instructor_id_field(@workout)%>
-<br>
-<%=f.label "Class Name"%>
+<%=instructor_id_field(@workout)%><br>
+
+<%=f.label :name%>
 <%=f.text_field :name%><br>
+<%=f.label "Link"%>
+<%=f.text_field :url%><br>
 <%=f.label :type%>
 <%=f.text_field :type%><br>
 <%=f.label :description%>
