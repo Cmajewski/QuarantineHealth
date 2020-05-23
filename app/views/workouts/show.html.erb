@@ -1,8 +1,8 @@
 <h1><%=@workout.instructor_name%></h1>
 
-
-<h3><%=@workout.name%></h3><br>
+<strong><%=@workout.name%><br></strong>
 <%=@workout.platform_name%><br>
-<%=@workout.platform.time%><br>
+Instructor: <%=@workout.instructor.name%><br>
+<%=@workout.time.to_formatted_s(:long)%><br>
 <%=@workout.description%><br>
 

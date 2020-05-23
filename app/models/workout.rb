@@ -10,5 +10,12 @@ class Workout < ApplicationRecord
     def instructor_name=(name)
         self.instructor.name=name
     end
+    def platform_name
+        self.platform.name
+    end
 
+    def instructor_name=(name)
+        self.platform.name=name
+    end
+    
 end

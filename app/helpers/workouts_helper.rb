@@ -42,5 +42,6 @@ module WorkoutsHelper
           hidden_field_tag "workout[instructor_id]", workout.instructor_id
         end
       end
+
     
 end

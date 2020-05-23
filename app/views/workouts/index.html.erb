@@ -3,8 +3,8 @@
 <%=link_to "Post a Class", new_workout_path%>
 <% @workouts.each do |workout|%>
     <h4><%=workout.name%></h4>
-    <li><%=instructor_name%></li>
-    <li><%=platform.name %></li>
-    <li><%= workout.time%></li>
+    <li><%=link_to workout.platform_name, workout.platform.url, target: :_blank%></li>
+    <li><%=workout.instructor_name%></li>
+    <li><%= workout.time.to_formatted_s(:long)    %></li>
     <li><%= workout.description%></li>
 <%end%>
