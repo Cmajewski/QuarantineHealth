@@ -14,6 +14,10 @@ class PlatformsController < ApplicationController
         end
     end 
 
+    def show
+        redirect_to platforms_path
+    end
+
     def index 
         @platforms=Platform.all
     end

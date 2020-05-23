@@ -46,7 +46,6 @@ ActiveRecord::Schema.define(version: 2020_05_23_010407) do
 
   create_table "workouts", force: :cascade do |t|
     t.string "name"
-    t.string "class_type"
     t.text "description"
     t.datetime "time"
     t.string "url"

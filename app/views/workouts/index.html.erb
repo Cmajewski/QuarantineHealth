@@ -1,12 +1,11 @@
-<h1>Classes</h1>
 <%=link_to "Post a Class", new_workout_path%>
 <div>
 
 <% @workouts.each do |workout|%>
     <h4><%=workout.name%></h4>
-    <li><%=link_to workout.instructor_name, workout.url%></li>
-    <li><%=link_to workout.platform.name, workout.url%></li>
-    <li><%= workout.class_type%></li>
+    <li><%=instructor_name%></li>
+    <li><%=platform.name %></li>
+    <li><%= workout.time%></li>
     <li><%= workout.description%></li>
 <%end%>
 </div>

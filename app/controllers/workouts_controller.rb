@@ -15,7 +15,7 @@ class WorkoutsController < ApplicationController
     end 
 
     def index 
-
+  
         if params[:instructor_id]
             @workouts=Instructor.find(params[:instructor_id]).workouts 
         elsif params[:platform_id]
@@ -52,6 +52,6 @@ class WorkoutsController < ApplicationController
     private 
 
     def workout_params
-        params.require(:workout).permit(:name,:class_type,:description,:ul,:instructor_id, :platform_id)
+        params.require(:workout).permit(:name,:description,:time,:instructor_id, :platform_id)
     end
 end
