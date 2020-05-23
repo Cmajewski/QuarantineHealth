@@ -1,5 +1,6 @@
 class WorkoutsController < ApplicationController
     def index 
+        if params[:instructor_id]
         @workouts=Workout.all
     end
 

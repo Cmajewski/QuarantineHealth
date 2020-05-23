@@ -13,7 +13,8 @@
 
     <div>
       <%if logged_in?%>
-      <%=button_to "Logout", logout_path%>
+      <%=button_to "Logout", logout_path%><br>
+      <%=link_to "Home",user_path(session[:user_id])%>
       <%else%>
       <%=link_to "Sign Up", signup_path%> |
       <%=link_to "Login", login_path%>
