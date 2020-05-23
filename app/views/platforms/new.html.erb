@@ -1,5 +1,16 @@
 <h1>Virtual Platform</h1>
 
+ <% if @platform.errors.any?%>
+        <div id="error_explanation">
+         <h3>There were some errors:</h3>
+            <ul>
+             <% @platform.errors.full_messages.each do |platform|%>
+                <li><%=platform%></li>
+                <%end%>
+            </ul>
+        </div>
+    <%end%>
+
 <%=form_for @platform do |f|%>
 <%=f.label :name%>
 <%=f.text_field :name%><br>

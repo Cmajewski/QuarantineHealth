@@ -1,20 +1,21 @@
 module WorkoutsHelper
-    def instructor_name
-        self.instructor.name 
-    end
   
     def instructor_name=(name)
         @instructor=Instructor.find_or_create_by(name: name)
         self.instructor=@instructor
     end
 
-    def platform_name
-        self.platform.name 
+    def instructor_name
+        self.instructor.name 
     end
 
     def platform_name=(name)
         @platform=Platform.find_or_create_by(name: name)
         self.platform=@platform
+    end
+
+    def platform_name
+        self.platform.name 
     end
 
 

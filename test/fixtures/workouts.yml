@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  type: 
+  class_type: 
   description: MyText
   time: 2020-05-21 15:06:37
   url: MyString
@@ -11,7 +11,7 @@ one:
 
 two:
   name: MyString
-  type: 
+class_type 
   description: MyText
   time: 2020-05-21 15:06:37
   url: MyString

@@ -1,8 +1,5 @@
 class WorkoutsController < ApplicationController
-    def index 
-        if params[:instructor_id]
-        @workouts=Workout.all
-    end
+
 
     def new 
         @workout=Workout.new
@@ -10,13 +7,22 @@ class WorkoutsController < ApplicationController
 
     def create 
         @workout=Workout.new(workout_params)
-        @instructor=
         if @workout.save
-            redirect_to instructor_path(@workout)
+            redirect_to workout_path(@workout)
         else
             render :new 
         end
     end 
+
+    def index 
+        if params[:instructor_id]
+            @workouts=Instructor.find(params[:instructor_id]).workouts 
+        elsif params[:instructor_id]
+            @workouts=Platform.find(params[:platform_id]).workouts 
+        else
+        @workouts=Workout.all
+        end
+    end
 
     def show
         @workout=Workout.find(params[:id])
@@ -44,6 +50,6 @@ class WorkoutsController < ApplicationController
     private 
 
     def workout_params
-        params.require(:workout).permit(:name,:type,:description,:instructor_id)
+        params.require(:workout).permit(:name,:class_type,:description,:ul,:instructor_id, :platform_id)
     end
 end

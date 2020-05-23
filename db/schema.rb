@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_22_115248) do
+ActiveRecord::Schema.define(version: 2020_05_23_010407) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "workout_id"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2020_05_22_115248) do
 
   create_table "workouts", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "class_type"
     t.text "description"
     t.datetime "time"
     t.string "url"
