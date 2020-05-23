@@ -8,15 +8,16 @@ module WorkoutsHelper
     def instructor_name
         self.instructor.name 
     end
+    
+    def platform_name
+        self.platform.name 
+    end
 
     def platform_name=(name)
         @platform=Platform.find_or_create_by(name: name)
         self.platform=@platform
     end
 
-    def platform_name
-        self.platform.name 
-    end
 
 
     def platform_id_field(workout)

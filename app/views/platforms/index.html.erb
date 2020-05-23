@@ -1,0 +1,5 @@
+<h1>Who is Hosting</h1>
+<%@platforms.each do |platform|%>
+    <li><%=link_to platform.name, platform_workouts_path(platform)%></li>
+    <%end%>
+

@@ -8,7 +8,7 @@ class PlatformsController < ApplicationController
     def create 
         @platform=Platform.new(platform_params)
         if @platform.save
-            redirect_to instructor_path(@platform)
+            redirect_to platforms_path
         else
             render :new 
         end

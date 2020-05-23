@@ -15,9 +15,10 @@ class WorkoutsController < ApplicationController
     end 
 
     def index 
+
         if params[:instructor_id]
             @workouts=Instructor.find(params[:instructor_id]).workouts 
-        elsif params[:instructor_id]
+        elsif params[:platform_id]
             @workouts=Platform.find(params[:platform_id]).workouts 
         else
         @workouts=Workout.all
@@ -26,6 +27,7 @@ class WorkoutsController < ApplicationController
 
     def show
         @workout=Workout.find(params[:id])
+        binding.pry
     end
 
     def edit
