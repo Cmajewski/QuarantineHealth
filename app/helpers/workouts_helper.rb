@@ -8,12 +8,15 @@ module WorkoutsHelper
     def instructor_name
         self.instructor.name 
     end
-    
+
     def platform_name
-        self.platform.name 
+        if params[:platform_id]
+        Platform.find(params[:platform_id]).name
+        end
     end
 
     def platform_name=(name)
+
         @platform=Platform.find_or_create_by(name: name)
         self.platform=@platform
     end
