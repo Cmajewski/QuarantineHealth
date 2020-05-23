@@ -9,10 +9,13 @@ module WorkoutsHelper
         self.instructor.name 
     end
 
-    def platform_name
+    def platform?
         if params[:platform_id]
         Platform.find(params[:platform_id]).name
         end
+    end
+
+    def platform_name
     end
 
     def platform_name=(name)

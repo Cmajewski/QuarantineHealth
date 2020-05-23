@@ -1,4 +1,6 @@
-<h1>Who is Hosting</h1>
+<%=link_to "New Platform", new_platform_path%>
+<h1>Virtual Platforms</h1>
+
 <%@platforms.each do |platform|%>
     <li><%=link_to platform.name, platform_workouts_path(platform)%></li>
     <%end%>

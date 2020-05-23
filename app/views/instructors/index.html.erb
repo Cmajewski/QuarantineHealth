@@ -1,7 +1,7 @@
 <h1>Instructors</h1>
 <ul>
 <%@instructors.each do |instructor|%>
-    <li><%=link_to instructor.name, instructor_workouts_path(instructor)%></li>
+    <li><%=link_to instructor.name.titlecase, instructor_workouts_path(instructor)%></li>
     <%=instructor.location%><br>
     Bio: <%=instructor.bio%>
     <%end%>
