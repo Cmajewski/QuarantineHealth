@@ -1,6 +1,6 @@
-<%=link_to "Post a Class", new_workout_path%>
-<div>
 
+<h1>Classes</h1>
+<%=link_to "Post a Class", new_workout_path%>
 <% @workouts.each do |workout|%>
     <h4><%=workout.name%></h4>
     <li><%=instructor_name%></li>
@@ -8,4 +8,3 @@
     <li><%= workout.time%></li>
     <li><%= workout.description%></li>
 <%end%>
-</div>

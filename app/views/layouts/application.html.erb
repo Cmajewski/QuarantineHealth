@@ -11,15 +11,15 @@
 
   <body>
 
-    <div>
+  <div class="btn">
       <%if logged_in?%>
-      <%=button_to "Logout", logout_path%><br>
+      <%=button_to "Logout", logout_path%>
       <%=link_to "Home",user_path(session[:user_id])%>
       <%else%>
       <%=link_to "Sign Up", signup_path%> |
       <%=link_to "Login", login_path%>
       <%end%>
-    </div>
+  </div>
 
     <%= yield %>
   </body>

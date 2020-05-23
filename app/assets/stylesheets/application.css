@@ -18,3 +18,7 @@
     color: #ED4337;
     font-weight:bold
   }
+
+  .field_with_errors input{
+    border: 1px solid #ED4337 !important;
+  }
